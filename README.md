@@ -28,8 +28,8 @@ Product purchase price + product margin - discount
 #### Discounts
 
 If a campaign is active, 
-    * subtract 10 kronor in discount for users Business and Consumer
-    * As a business user you receive 5 kronor in discount extra
-    * LargeCorporateUser gets 10 % discount of the product
+* subtract 10 kronor in discount for users Business and Consumer
+* As a business user you receive 5 kronor in discount extra
+* LargeCorporateUser gets 10 % discount of the product
 
 
