@@ -4,7 +4,12 @@ public static class ApplicationServiceExtensions
 {
     public static IServiceCollection AddApplicationDependency(this IServiceCollection services)
     {
-        services.AddMediatR(Assembly.GetExecutingAssembly());
+        
+        services.AddMediatR(
+            cfg =>
+            {
+                cfg.RegisterServicesFromAssemblyContaining(typeof(IPriceCalculatorRoot));
+            });
         return services;
     }
 }
