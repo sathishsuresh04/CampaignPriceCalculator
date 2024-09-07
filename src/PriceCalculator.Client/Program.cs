@@ -1,4 +1,6 @@
-﻿var serviceCollection = new ServiceCollection()
+﻿using System.Globalization;
+
+var serviceCollection = new ServiceCollection()
     .AddLogging()
     .AddApplicationDependency();
 
@@ -23,7 +25,7 @@ catch (Exception exception)
     throw;
 }
 
-Console.WriteLine($"Calculated price is {price.ToString()}");
+Console.WriteLine($"Calculated price is {price.ToString(CultureInfo.InvariantCulture)}");
 Console.ReadKey();
 
 if (serviceProvider is IDisposable disposable) disposable.Dispose();

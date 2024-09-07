@@ -2,14 +2,8 @@
 
 public class PriceCalculatorCommandHandlerTests
 {
-    private readonly PriceCalculatorCommandHandler _sut;
-    private readonly PriceCalculatorCommandValidator _validator;
-
-    public PriceCalculatorCommandHandlerTests()
-    {
-        _sut = new PriceCalculatorCommandHandler();
-        _validator = new PriceCalculatorCommandValidator();
-    }
+    private readonly PriceCalculatorCommandHandler _sut = new();
+    private readonly PriceCalculatorCommandValidator _validator = new();
 
     [Fact]
     public async Task PriceCalculatorCommandHandler_ValidateUserType_Should_Not_Have_Error_Response()
